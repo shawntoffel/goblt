@@ -1,3 +1,3 @@
-module github.com/shawntoffel/blt
+module github.com/shawntoffel/goblt
 
 go 1.17
