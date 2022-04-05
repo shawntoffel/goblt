@@ -21,7 +21,7 @@ A BLT file format parser in Go. Used for election data.
 "My Election"
 ```
 * The first line `6 3` indicates the number of candidates `6` and seats `3`. 
-* The second line `-2 -6` is optional and may be omited. It contains negative candidate numbers indicating candidate 2 and 6 are withdrawn.
+* The second line `-2 -6` is optional and may be omitted. It contains negative candidate numbers indicating candidates 2 and 6 are withdrawn.
 * The next lines contain vote data. `28 1=2 3 0` indicates there are 28 votes each containing candidate preferences `1=2 3`. The end of a vote line is indicated by a `0`. The preference `1=2 3` indicates `1` and `2` are tied for first preference, and `3` is second preference. 
 
 * A line with a single `0` indicates the end of all vote data.
