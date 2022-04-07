@@ -24,6 +24,7 @@ type FlatNamedBallot struct {
 	Preferences []string
 }
 
+// NamedWithdrawn return withdrawn candidates by name.
 func (e *Election) NamedWithdrawn() []string {
 	namedWithdrawn := make([]string, len(e.Withdrawn))
 
@@ -34,6 +35,7 @@ func (e *Election) NamedWithdrawn() []string {
 	return namedWithdrawn
 }
 
+// NamedBallots return ballots using candidate names.
 func (e *Election) NamedBallots() []NamedBallot {
 	namedBallots := make([]NamedBallot, len(e.Ballots))
 
@@ -56,6 +58,7 @@ func (e *Election) NamedBallots() []NamedBallot {
 	return namedBallots
 }
 
+// FlatNamedBallots returns ballots with preferences flattened to a 1d slice and using candidate names.
 func (e *Election) FlatNamedBallots() []FlatNamedBallot {
 	namedballots := e.NamedBallots()
 	flatNamedBallots := make([]FlatNamedBallot, len(namedballots))

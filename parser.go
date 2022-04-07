@@ -11,12 +11,14 @@ type Parser struct {
 	buf *bufio.Reader
 }
 
+// NewParser initializes a new Parser using the provided io.Reader.
 func NewParser(r io.Reader) *Parser {
 	return &Parser{
 		buf: bufio.NewReader(r),
 	}
 }
 
+// Parse reads BLT data and returns an Election.
 func (p *Parser) Parse() (*Election, error) {
 	numCandidates, err := p.readInt()
 	if err != nil {
